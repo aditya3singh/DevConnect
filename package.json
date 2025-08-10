@@ -1,0 +1,28 @@
+{
+  "name": "devconnect",
+  "version": "1.0.0",
+  "description": "DevConnect - Where Developers Meet, Collaborate, and Grow in Real Time",
+  "main": "index.js",
+  "scripts": {
+    "install-client": "cd client && npm install",
+    "install-server": "cd server && npm install",
+    "install-all": "npm run install-client && npm run install-server",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "test": "cd server && npm test",
+    "test:client": "cd client && npm test",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up",
+    "docker:down": "docker-compose down",
+    "check-setup": "node scripts/check-setup.js"
+  },
+  "keywords": ["react", "node", "express", "mongodb", "socket.io", "developer", "collaboration"],
+  "author": "Aditya Singh",
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
